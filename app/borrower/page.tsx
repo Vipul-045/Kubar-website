@@ -34,7 +34,7 @@ const Borrower = (props: Props) => {
               </div>
               <p className="font-medium">Loan History</p>
             </div>
-            <Link href="#">
+            <Link href="">
               <div className="p-4 border rounded-md flex gap-4 items-center cursor-pointer hover:bg-slate-50 transition-colors duration-100 ease-in">
                 <div className="p-2 bg-[#DEF6EE] rounded-sm">
                   <Image src={creditcard} alt="creditcard" />
@@ -47,6 +47,12 @@ const Borrower = (props: Props) => {
                 <Image src={account} alt="account" />
               </div>
               <p className="font-medium">Account Details</p>
+            </div>
+            <div className="p-4 border rounded-md flex gap-4 items-center cursor-pointer hover:bg-slate-50 transition-colors duration-100 ease-in">
+              <div className="p-2 bg-[#DEF6EE] rounded-sm">
+                <Image src={faq} alt="account" />
+              </div>
+              <p className="font-medium">Uploaded Documents</p>
             </div>
             <div className="p-4 border rounded-md flex gap-4 items-center cursor-pointer hover:bg-slate-50 transition-colors duration-100 ease-in">
               <div className="p-2 bg-[#DEF6EE] rounded-sm">
