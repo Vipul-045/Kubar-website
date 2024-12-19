@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -18,6 +18,8 @@ import borrower from "../../assets/images/borrower.png"
 import logo from '../../assets/icons/kubarlogo.png'
 import Image from 'next/image';
 import { Label } from '@/components/ui/label';
+import { signIn, signOut , useSession } from 'next-auth/react';
+import { Appbar } from '@/components/ui/Loginbutton';
 
 type Props = {};
 
@@ -27,6 +29,9 @@ const Navbar = (props: Props) => {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
+  const session = useSession();
+
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -48,11 +53,9 @@ const Navbar = (props: Props) => {
             <p className="text-gray-600 hover:text-gray-900 cursor-pointer">Contact</p>
           </Link> */}
           <Dialog>
-            <DialogTrigger asChild>
-              <Button className="">
-                Demo
-              </Button>
-            </DialogTrigger>
+            <div>
+               <Appbar onSignin={signIn} onSignout={signOut} user={session.data?.user}/>
+              </div>
             <DialogContent className="sm:max-w-2xl">
               <div className="grid grid-cols-2 gap-4 py-4">
                 <Link href="/lender">
