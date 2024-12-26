@@ -210,68 +210,85 @@ const Create = () => {
               <p className="uppercase font-semibold text-white">Consent Management</p>
             </div>
             <div className="p-4 flex flex-col gap-6">
-              <RadioGroup defaultValue="option-one">
-                <div className="w-full rounded-md border p-4 flex justify-between items-center">
-                  <div className="flex gap-4">
-                    <Image src={setu} alt="img" />
-                    <div>
-                      <p>Setu AA by Agya Technologies</p>
-                      <p>Rating: 4/5</p>
+              <Tabs defaultValue="aggregators" className="w-full">
+                <TabsList className="w-full flex justify-between mb-6">
+                  <TabsTrigger value="banks" className="w-full">Banks</TabsTrigger>
+                  <TabsTrigger value="aggregators" className="w-full">Account Aggregators</TabsTrigger>
+                </TabsList>
+                
+                {/* Banks Tab Content */}
+                <TabsContent value="banks" className="mt-2">
+                  <div className="flex justify-center items-center h-40 text-gray-500">
+                    No banks available at the moment
+                  </div>
+                </TabsContent>
+
+                {/* Account Aggregators Tab Content */}
+                <TabsContent value="aggregators">
+                  <RadioGroup defaultValue="option-one">
+                    <div className="w-full rounded-md border p-4 flex justify-between items-center">
+                      <div className="flex gap-4">
+                        <Image src={setu} alt="img" />
+                        <div>
+                          <p>Setu AA by Agya Technologies</p>
+                          <p>Rating: 4/5</p>
+                        </div>
+                      </div>
+                      <div>
+                        <RadioGroupItem value="setu" id="setu" />
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <RadioGroupItem value="setu" id="setu" />
-                  </div>
-                </div>
-                <div className="w-full rounded-md border p-4 flex justify-between items-center">
-                  <div className="flex gap-4">
-                    <Image src={phonepe} alt="img" />
-                    <div>
-                      <p>PhonePe</p>
-                      <p>Rating: 5/5</p>
+                    <div className="w-full rounded-md border p-4 flex justify-between items-center">
+                      <div className="flex gap-4">
+                        <Image src={phonepe} alt="img" />
+                        <div>
+                          <p>PhonePe</p>
+                          <p>Rating: 5/5</p>
+                        </div>
+                      </div>
+                      <div>
+                        <RadioGroupItem value="phonepay" id="phonepay" />
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <RadioGroupItem value="phonepay" id="phonepay" />
-                  </div>
-                </div>
-                <div className="w-full rounded-md border p-4 flex justify-between items-center">
-                  <div className="flex gap-4">
-                    <Image src={digio} alt="img" />
-                    <div>
-                      <p>Digio Link</p>
-                      <p>Rating: 4/5</p>
+                    <div className="w-full rounded-md border p-4 flex justify-between items-center">
+                      <div className="flex gap-4">
+                        <Image src={digio} alt="img" />
+                        <div>
+                          <p>Digio Link</p>
+                          <p>Rating: 4/5</p>
+                        </div>
+                      </div>
+                      <div>
+                        <RadioGroupItem value="digio" id="digio" />
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <RadioGroupItem value="digio" id="digio" />
-                  </div>
-                </div>
-                <div className="w-full rounded-md border p-4 flex justify-between items-center">
-                  <div className="flex gap-4">
-                    <Image src={onemoney} alt="img" />
-                    <div>
-                      <p>Onemoney</p>
-                      <p>Rating: 4/5</p>
+                    <div className="w-full rounded-md border p-4 flex justify-between items-center">
+                      <div className="flex gap-4">
+                        <Image src={onemoney} alt="img" />
+                        <div>
+                          <p>Onemoney</p>
+                          <p>Rating: 4/5</p>
+                        </div>
+                      </div>
+                      <div>
+                        <RadioGroupItem value="onemoney" id="onemoney" />
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <RadioGroupItem value="onemoney" id="onemoney" />
-                  </div>
-                </div>
-                <div className="w-full rounded-md border p-4 flex justify-between items-center">
-                  <div className="flex gap-4">
-                    <Image src={finvu} alt="img" />
-                    <div>
-                      <p>Finvu</p>
-                      <p>Rating: 4/5</p>
+                    <div className="w-full rounded-md border p-4 flex justify-between items-center">
+                      <div className="flex gap-4">
+                        <Image src={finvu} alt="img" />
+                        <div>
+                          <p>Finvu</p>
+                          <p>Rating: 4/5</p>
+                        </div>
+                      </div>
+                      <div>
+                        <RadioGroupItem value="finvu" id="finvu" />
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <RadioGroupItem value="finvu" id="finvu" />
-                  </div>
-                </div>
-              </RadioGroup>
+                  </RadioGroup>
+                </TabsContent>
+              </Tabs>
             </div>
           </section>
           <div className="mt-5 flex justify-end">
