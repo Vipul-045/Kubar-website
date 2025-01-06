@@ -1,4 +1,4 @@
-// signup.tsx
+'use client'
 import React, { useState } from 'react';
 import { Mail, Lock, User, ArrowRight } from 'lucide-react';
 
