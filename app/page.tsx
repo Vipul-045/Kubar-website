@@ -19,7 +19,6 @@ import lender from "./assets/images/lender.png"
 import borrower from "./assets/images/borrower.png"
 import Link from "next/link";
 import Footer from "./ui/Footer/Footer";
-import { useSession, signIn, signOut } from "next-auth/react";
 
 
 export default function Home() {
